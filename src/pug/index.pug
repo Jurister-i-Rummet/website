@@ -23,7 +23,9 @@ html(lang='en')
         link(href='css/styles.css', rel='stylesheet')
 
         script.
-            document.getElementById("contactForm").setAttribute("data-sb-form-api-token", process.env.FORM_KEY)
+            document.addEventListener("DOMContentLoaded", function () {
+                document.getElementById("contactForm").setAttribute("data-sb-form-api-token", process.env.FORM_KEY)
+            })
 
     body#page-top
 
@@ -132,9 +134,9 @@ html(lang='en')
                                 .col-auto
                                     button#submitButton.btn.btn-primary.disabled(type='submit') Modtag nyheder
                             .invalid-feedback.mt-2(data-sb-feedback='emailAddress:required')
-                                | An email is required.
+                                | Du skal indtaste en email.
                             .invalid-feedback.mt-2(data-sb-feedback='emailAddress:email')
-                                | Email is not valid.
+                                | Email ugyldig.
 
                             // Submit success message
                             //

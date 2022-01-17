@@ -15,7 +15,9 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
         <script>
-            document.getElementById('contactForm').setAttribute('data-sb-form-api-token', process.env.FORM_KEY);
+            document.addEventListener('DOMContentLoaded', function () {
+                document.getElementById('contactForm').setAttribute('data-sb-form-api-token', process.env.FORM_KEY);
+            });
         </script>
     </head>
     <body id="page-top">
@@ -125,8 +127,8 @@
                                 <div class="col"><input class="form-control" id="emailAddress" type="email" placeholder="Indtast din email-adresse" aria-label="Indtast din email-adresse" data-sb-validations="required,email" /></div>
                                 <div class="col-auto"><button class="btn btn-primary disabled" id="submitButton" type="submit">Modtag nyheder</button></div>
                             </div>
-                            <div class="invalid-feedback mt-2" data-sb-feedback="emailAddress:required">An email is required.</div>
-                            <div class="invalid-feedback mt-2" data-sb-feedback="emailAddress:email">Email is not valid.</div>
+                            <div class="invalid-feedback mt-2" data-sb-feedback="emailAddress:required">Du skal indtaste en email.</div>
+                            <div class="invalid-feedback mt-2" data-sb-feedback="emailAddress:email">Email ugyldig.</div>
                             <!-- Submit success message-->
                             <!---->
                             <!-- This is what your users will see when the form-->
