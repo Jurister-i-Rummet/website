@@ -125,12 +125,12 @@ html(lang='en')
                                 .col
                                     input#emailAddress.form-control(
                                         type='email',
-                                        placeholder='Enter email address...',
-                                        aria-label='Enter email address...',
+                                        placeholder='Indtast din email-adresse',
+                                        aria-label='Indtast din email-adresse',
                                         data-sb-validations='required,email'
                                     )
                                 .col-auto
-                                    button#submitButton.btn.btn-primary.disabled(type='submit') Notify Me!
+                                    button#submitButton.btn.btn-primary.disabled(type='submit') Modtag nyheder
                             .invalid-feedback.mt-2(data-sb-feedback='emailAddress:required')
                                 | An email is required.
                             .invalid-feedback.mt-2(data-sb-feedback='emailAddress:email')
@@ -143,10 +143,7 @@ html(lang='en')
 
                             #submitSuccessMessage.d-none
                                 .text-center.mb-3.mt-2.text-white
-                                    .fw-bolder Form submission successful!
-                                    | To activate this form, sign up at
-                                    br
-                                    a(href='https://startbootstrap.com/solution/contact-forms') https://startbootstrap.com/solution/contact-forms
+                                    .fw-bolder Sådan!
 
                             // Submit error message
                             //
@@ -154,7 +151,7 @@ html(lang='en')
                             // an error submitting the form
 
                             #submitErrorMessage.d-none
-                                .text-center.text-danger.mb-3.mt-2 Error sending message!
+                                .text-center.text-danger.mb-3.mt-2 Der skete en fejl.
 
         // Contact
         section.contact-section.bg-black
